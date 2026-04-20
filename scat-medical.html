@@ -876,12 +876,7 @@
     setRatchet('stare','Nurse Ratchet has reviewed your chart. She has opinions.');
 
     // ── GroupMe webhook ──────────────────────────────────────────
-    // STEP 1: Go to dev.groupme.com → Bots → Create Bot
-    // STEP 2: Name it "SCAT Medical", pick the group, submit
-    // STEP 3: Copy the bot_id and paste it below, then uncomment
-    // ─────────────────────────────────────────────────────────────
-    /*
-    const GROUPME_BOT_ID = 'PASTE_YOUR_BOT_ID_HERE';
+    const GROUPME_BOT_ID = '34405103d56ec6e1add9065ac6';
     const cc = document.getElementById('chief-complaint');
     fetch('https://api.groupme.com/v3/bots/post', {
       method:'POST', headers:{'Content-Type':'application/json'},
@@ -890,11 +885,11 @@
         `👤 Patient: ${document.getElementById('patient-name').value||'Unknown'}`,
         `🤒 Complaint: ${cc.options[cc.selectedIndex]?.text||'Unknown'}`,
         `💀 Pain: ${pain}/10  |  Dying: ${dying||'unspecified'}  |  Duration: ${duration||'unspecified'}`,
-        `📋 Scott's verdict: ${triage.verdict}`,
+        `📋 Scott\'s verdict: ${triage.verdict}`,
         `👩‍⚕️ Dr. Catherine says: ${document.getElementById('diag-text').textContent}`
       ].join('\n')})
     });
-    */
+    // ─────────────────────────────────────────────────────────────
   }
 
   function closeDiagnosis() {
